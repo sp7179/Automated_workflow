@@ -195,7 +195,7 @@ npm run dev
 
 ## 🧑‍💻 Author
 
-[Your Name]
+SHOURISH PAUL
 
 ---
 
