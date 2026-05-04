@@ -1,0 +1,87 @@
+# =========================
+# 🔥 GENERAL
+# =========================
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+
+# =========================
+# 🔥 ENV / SECRETS (VERY IMPORTANT)
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# 🔥 PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Cache
+.mypy_cache/
+.pytest_cache/
+.pyre/
+.cache/
+
+# =========================
+# 🔥 NODE / NEXT.JS
+# =========================
+node_modules/
+.next/
+out/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# 🔥 IDE / EDITORS
+# =========================
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# =========================
+# 🔥 DATABASE / LOCAL FILES
+# =========================
+*.sqlite3
+*.db
+
+# =========================
+# 🔥 UPLOADS / TEMP FILES
+# =========================
+uploads/
+temp/
+tmp/
+
+# =========================
+# 🔥 TEST / COVERAGE
+# =========================
+.coverage
+htmlcov/
+
+# =========================
+# 🔥 OS / SYSTEM FILES
+# =========================
+*.bak
+*.backup

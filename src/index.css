@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+/* 🔥 REMOVE DEFAULT REACT FLOW NODE WHITE BOX */
+.react-flow__node {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-flow__node-default {
+  background: transparent !important;
+}
