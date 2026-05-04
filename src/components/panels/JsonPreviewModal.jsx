@@ -20,6 +20,23 @@ export default function JsonPreviewModal({ data, onClose }) {
     }
   };
 
+  // ⬇️ DOWNLOAD FUNCTION (NEW)
+  const handleDownload = () => {
+    const blob = new Blob(
+      [jsonString],
+      { type: "application/json" }
+    );
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "workflow.json";
+    a.click();
+
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <AnimatePresence>
       <motion.div
@@ -44,6 +61,7 @@ export default function JsonPreviewModal({ data, onClose }) {
             </h2>
 
             <div className="flex items-center gap-2">
+
               {/* COPY BUTTON */}
               <motion.button
                 whileHover={{ scale: 1.08 }}
@@ -56,6 +74,17 @@ export default function JsonPreviewModal({ data, onClose }) {
                 {copied ? "Copied" : "Copy"}
               </motion.button>
 
+              {/* 🔥 DOWNLOAD BUTTON (NEW — SAME STYLE LEVEL) */}
+              <motion.button
+                whileHover={{ scale: 1.08 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={handleDownload}
+                className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 
+                           text-white text-xs px-3 py-1.5 rounded-lg"
+              >
+                Download
+              </motion.button>
+
               {/* CLOSE */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
@@ -64,6 +93,7 @@ export default function JsonPreviewModal({ data, onClose }) {
               >
                 <X size={18} />
               </motion.button>
+
             </div>
           </div>
 
